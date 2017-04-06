@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+install: 
+  - "pip install cookiecutter"
+script:
+  - "cookiecutter ProsperFlask --no-input -o test_prosperflask"
+  - "pip install -e test_prosperflask"
+  - "python test_prosperflask/setup.py test"
+  - "pip uninstall test_prosperflask"
+  - "cookiecutter ProsperLibrary --no-input -o test_prosperlib"
+  - "pip install -e test_prosperlib"
+  - "python test_prosperlib/setup.py test"
+  - "pip uninstall test_prosperlib"
