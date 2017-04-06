@@ -1,0 +1,15 @@
+[Unit]
+Description={{cookiecutter.app_description}}
+After=multi-user.target
+
+[Service]
+TimeoutStartSec=30
+Type=simple
+WorkingDirectory=/opt/venvs/{{cookiecutter.deb_project_name}}/
+ExecStart=/opt/venvs/{{cookiecutter.deb_project_name}}/bin/python3.5 /opt/venvs/{{cookiecutter.deb_project_name}}/scripts/manager.py runserver
+StandardOutput=syslog
+StadardError=syslog
+User=root
+
+[Install]
+WantedBy=multi-user.target
