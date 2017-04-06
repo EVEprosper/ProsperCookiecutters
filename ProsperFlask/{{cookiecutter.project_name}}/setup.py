@@ -98,7 +98,7 @@ setup(
     url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}',
     download_url='https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/tarball/v' + __version__,
     version=__version__,
-    license='MIT',
+    license='TODO',
     classifiers=[
         'Programming Language :: Python :: 3.5'
     ],
