@@ -1,0 +1,13 @@
+#!/bin/bash
+echo 'RUNNING POST INSTALL FOR {{cookiecutter.deb_project_name}}'
+
+echo '--installing services'
+for service in /opt/venvs/{{cookiecutter.deb_project_name}}/services/*
+do
+    echo $service
+    systemctl stop $(basename $service)
+    cp -f $service /lib/systemd/system/
+    systemctl enable $(basename $service)
+    systemctl start $(basename $service)
+done
+systemctl daemon-reload
