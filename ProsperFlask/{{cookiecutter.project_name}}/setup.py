@@ -6,6 +6,7 @@ Returns:
 """"""Setup.py for ProsperAPI Flask project"""
 
 from os import path, listdir
+import importlib
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
@@ -110,7 +111,7 @@ setup(
 
     },
     install_requires=[
-        'ProsperCommon'
+        'ProsperCommon',
         'Flask~=0.12',
         'Flask-RESTful~=0.3.5',
         'flask-script~=2.0.5',

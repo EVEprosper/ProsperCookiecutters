@@ -9,7 +9,7 @@ try:
     import prosper.common.prosper_logging as p_logging
 except ImportError:
     import warnings
-    warning.warn('environment not set up yet')
+    warnings.warn('environment not set up yet')
 
 HERE = path.abspath(path.dirname(__file__))
 

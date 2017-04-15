@@ -2,11 +2,11 @@
 INSTALLED = True
 try:    #pragma: no cover
     import semantic_version
-except ModuleNotFoundError:
+except ImportError:
     INSTALLED = False
 
-__version__ =  {{cookiecutter.version_number}}
-__template_version__ = {{cookiecutter.template_version}}
+__version__ =  '{{cookiecutter.version_number}}'
+__template_version__ = '{{cookiecutter.template_version}}'
 # major.minor.patch-prerelease
 
 def semantic_to_numeric(version_string):
