@@ -50,7 +50,7 @@ class HelloWorld_endpoint(Resource):
         try:
             message = {{cookiecutter.app_name}}_utils.hello_world(
                 args.get('message'),
-                api_config.LOGGER
+                logger=api_config.LOGGER
             )
         except exceptions.HelloWorldException as err:
             api_config.LOGGER.warning(
@@ -59,7 +59,7 @@ class HelloWorld_endpoint(Resource):
                 exc_info=True
             )
             return err.message, err.status
-        except Exception as err:
+        except Exception as err:    #pragma: no cover
             api_config.LOGGER.error(
                 'Unexpected failure generating hello world message' +
                 '\n\targs={0}'.format(args),
@@ -88,7 +88,7 @@ class VersionEndpoint(Resource):
 
         version_info = {
             'app_version': version.__version__,
-            'template_version': version.__template_version,
+            'template_version': version.__template_version__,
             'numeric_version': version.__version_int__
         }
 

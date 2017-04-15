@@ -7,9 +7,10 @@ import {{cookiecutter.app_name}}.config as api_config
 LOGGER = api_config.LOGGER
 HERE = path.abspath(path.dirname(__file__))
 
+BASE_MESSAGE = 'Is the `s` or the `c` silent in `scent`?'
 def hello_world(
         message,
-        base_message='Is the `s` or the `c` silent in `scent`?',
+        base_message=BASE_MESSAGE,
         logger=LOGGER
 ):
     """basic function as demo framework - cookiecutter
