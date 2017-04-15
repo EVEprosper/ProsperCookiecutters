@@ -14,7 +14,7 @@ install:
 script:
   - "cookiecutter ProsperFlask --no-input"
   - "cd FlaskSample"
-  - "virtualenv venv_flask"
+  - "virtualenv venv_flask -p python3"
   - "source venv_flask/bin/activate"
   - "pip install ."
   - "python setup.py test"
