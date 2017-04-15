@@ -3,6 +3,11 @@ python:
   - "3.5"
 install: 
   - "pip install cookiecutter"
+  - "cookiecutter ProsperFlask --no-input"
+  - "virtualenv venv_flask -p python3"
+  - "source venv_flask/bin/activate"
+  - "pip install ."
+  - "deactivate"
   ## dh-virtualenv ##
   #- "sudo apt-get install devscripts python-virtualenv git equivs"
   #- "git clone https://github.com/spotify/dh-virtualenv.git"
@@ -12,11 +17,8 @@ install:
   #- "cd .."
   #- "sudo dpkg -i dh-virtualenv*.deb"
 script:
-  - "cookiecutter ProsperFlask --no-input"
   - "cd FlaskSample"
-  - "virtualenv venv_flask -p python3"
-  - "source venv_flask/bin/activate"
-  - "pip install ."
+  - "source ../venv_flask/bin/activate"
   - "python setup.py test"
   #- "python setup.py test"
   - "deactivate"
