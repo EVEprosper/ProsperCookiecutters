@@ -13,7 +13,7 @@ install:
   - "sudo dpkg -i dh-virtualenv*.deb"
 script:
   - "cookiecutter ProsperFlask --no-input"
-  - "pip install -e FlaskSample --extra-index-url=https://repo.fury.io/lockefox/"
+  - "pip install -e FlaskSample"
   - "python FlaskSample/setup.py test"
   - "pip uninstall FlaskSample"
   #- "cookiecutter ProsperLibrary --no-input -o test_prosperlib"
