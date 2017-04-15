@@ -52,7 +52,8 @@ class PyTest(TestCommand):
         TestCommand.initialize_options(self)
         self.pytest_args = [
             '-rx',
-            'tests',
+            '-vv',
+            'tests/',
             '--cov={{cookiecutter.app_name}}/',
             '--cov-report=term-missing'
         ]    #load defaults here
