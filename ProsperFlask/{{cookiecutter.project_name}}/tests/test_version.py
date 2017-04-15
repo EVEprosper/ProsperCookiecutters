@@ -55,4 +55,3 @@ def test_not_installed():
     numeric_val = version.semantic_to_numeric('1.2.3-4')
 
     assert numeric_val == -1.0
-    assert False
