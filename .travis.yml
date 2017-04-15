@@ -16,6 +16,7 @@ script:
   - "cd FlaskSample"
   - "pip install ."
   - "python setup.py test"
+  - "python setup.py test"
   - "sudo dpkg-buildpackage -us -uc -d"
   - "pip uninstall ."
   - "cd .."
