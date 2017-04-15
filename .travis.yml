@@ -1,15 +1,22 @@
 language: python
 python:
   - "3.5"
-  - "3.6"
 install: 
   - "pip install cookiecutter"
+  ## dh-virtualenv ##
+  - "sudo apt-get install devscripts python-virtualenv git equivs"
+  - "git clone https://github.com/spotify/dh-virtualenv.git"
+  - "cd dh-virtualenv"
+  - "sudo mk-build-deps -ri"
+  - "sudo -E dpkg-buildpackage -us -uc -b"
+  - "cd .."
+  - "sudo dpkg -i dh-virtualenv*.deb"
 script:
-  - "cookiecutter ProsperFlask --no-input -o test_prosperflask"
-  - "pip install -e test_prosperflask --extra-index-url=https://repo.fury.io/lockefox/"
-  - "python test_prosperflask/setup.py test"
-  - "pip uninstall test_prosperflask"
-  - "cookiecutter ProsperLibrary --no-input -o test_prosperlib"
-  - "pip install -e test_prosperlib --extra-index-url=https://repo.fury.io/lockefox/"
-  - "python test_prosperlib/setup.py test"
-  - "pip uninstall test_prosperlib"
+  - "cookiecutter ProsperFlask --no-input"
+  - "pip install -e FlaskSample --extra-index-url=https://repo.fury.io/lockefox/"
+  - "python FlaskSample/setup.py test"
+  - "pip uninstall FlaskSample"
+  #- "cookiecutter ProsperLibrary --no-input -o test_prosperlib"
+  #- "pip install -e test_prosperlib --extra-index-url=https://repo.fury.io/lockefox/"
+  #- "python test_prosperlib/setup.py test"
+  #- "pip uninstall test_prosperlib"
