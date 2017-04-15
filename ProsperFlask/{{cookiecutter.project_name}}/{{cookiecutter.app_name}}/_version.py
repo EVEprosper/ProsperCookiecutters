@@ -5,7 +5,7 @@ try:    #pragma: no cover
 except ModuleNotFoundError:
     INSTALLED = False
 
-__version__ = '1.0.0'
+__version__ =  {{cookiecutter.version_number}}
 __template_version__ = {{cookiecutter.template_version}}
 # major.minor.patch-prerelease
 

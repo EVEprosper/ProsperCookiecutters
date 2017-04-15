@@ -1,13 +1,9 @@
-
-    """Slurps up all files in a directory (non recursive) for data_files section
-
-    Note:
-        Not recursive, only includes flat files
-
-    Returns:
-        (:obj:`list` :obj:`str`) list of all non-directories in a file
-
-    """"""Setup.py for ProsperAPI Flask project"""
+"""Slurps up all files in a directory (non recursive) for data_files section
+Note:
+    Not recursive, only includes flat files
+Returns:
+    (:obj:`list` :obj:`str`) list of all non-directories in a file
+""""""Setup.py for ProsperAPI Flask project"""
 
 from os import path, listdir
 from setuptools import setup, find_packages

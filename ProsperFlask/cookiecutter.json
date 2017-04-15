@@ -1,0 +1,15 @@
+{
+	"project_name":"FlaskSample",
+	"deb_project_name":"prosper-flask-sample",
+	"app_name":"DemoApp",
+	"app_description":"REST endpoint for Prosper stuff",
+	"endpoint_group":"HelloWorld",
+	"project_keywords":"REST Flask API",
+	"author_name":"John Purcell",
+	"author_email":"prospermarketshow@gmail.com",
+	"github_username":"EVEProsper",
+	"version_number":"1.0.0",
+	"template_version":"1.0.0",
+	"port_number":8000,
+	"log_path":"HERE"
+}

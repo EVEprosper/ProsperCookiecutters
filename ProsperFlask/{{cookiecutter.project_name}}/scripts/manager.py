@@ -18,9 +18,6 @@ CONFIG_FILEPATH = path.join(HERE, 'app.cfg')
 
 CONFIG = p_config.ProsperConfig(CONFIG_FILEPATH)
 
-SETTINGS = {
-    'PORT':{{cookiecutter:port_number}}
-}
 APP = create_app(SETTINGS, CONFIG)
 
 MANAGER = Manager(APP)
@@ -28,14 +25,14 @@ MANAGER.add_command(
     'runserver',
     Server(
         host='0.0.0.0',
-        port=SETTINGS['PORT']
+        port=CONFIG.get('DEBUG')
     )
 )
 MANAGER.add_command(
     'debug',
     Server(
         use_debugger=True,
-        port=SETTINGS['PORT']
+        port=CONFIG.get('PROD', 'port')
     )
 )
 @MANAGER.command

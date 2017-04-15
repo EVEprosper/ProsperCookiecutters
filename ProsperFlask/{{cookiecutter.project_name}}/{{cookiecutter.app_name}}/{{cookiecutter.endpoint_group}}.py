@@ -96,5 +96,5 @@ class VersionEndpoint(Resource):
 
         return version_info
 
-API.add_resource(HelloWorld_endpoint, '/{0}/info/hello_world'.format('{{cookiecutter.endpoint_group'.lower()))
-API.add_resource(VersionEndpoint, '/{0}/info/version'.format('{{cookiecutter.endpoint_group'.lower()))
+API.add_resource(HelloWorld_endpoint, '/{0}/info/hello_world'.format('{{cookiecutter.endpoint_group}}'.lower()))
+API.add_resource(VersionEndpoint, '/{0}/info/version'.format('{{cookiecutter.endpoint_group}}'.lower()))

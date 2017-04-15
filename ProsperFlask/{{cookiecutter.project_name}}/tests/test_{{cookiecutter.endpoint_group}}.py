@@ -29,12 +29,12 @@ class TestVersionEndpoint:
 
 
 @pytest.mark.usefixtures('client_class')
-class Test{{cookiecutter.demo_endpoint}}Endpoint:
-    """test framework for checking {{cookiecutter.demo_endpoint}} behavior"""
+class TestHelloWorldEndpoint:
+    """test framework for checking HelloWorld behavior"""
     def test_endpoint_happypath(self):
-        """good-path for {{cookiecutter.demo_endpoint}} endpoint"""
+        """good-path for HelloWorld endpoint"""
         pass
 
     def test_endpoint_failure(self):
-        """validate error behavior for {{cookiecutter.demo_endpoint}} endpoint"""
+        """validate error behavior for HelloWorld endpoint"""
         pass
