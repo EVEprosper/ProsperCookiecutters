@@ -53,7 +53,7 @@ class TestHelloWorldEndpoint:
             '?message=' + message
         )
         raw_data = json.loads(req.data.decode())
-        from {{cookiecutter.app_name}}.{{cookiecutter.endpoint_groupdo}}_utils import BASE_MESSAGE
+        from {{cookiecutter.app_name}}.{{cookiecutter.endpoint_group}}_utils import BASE_MESSAGE
 
         assert raw_data['message'] == BASE_MESSAGE + ' ' + message
 
@@ -63,4 +63,9 @@ class TestHelloWorldEndpoint:
 
     def test_endpoint_failure(self):
         """validate error behavior for HelloWorld endpoint"""
-        pass
+        message = 34
+        req = self.client.get(
+            url_for('helloworld_endpoint') +
+            '?message={0}'.format(message)
+        )
+        assert req._status_code == 403

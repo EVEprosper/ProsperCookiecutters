@@ -52,7 +52,7 @@ class HelloWorld_endpoint(Resource):
                 args.get('message'),
                 logger=api_config.LOGGER
             )
-        except exceptions.HelloWorldException as err:
+        except exceptions.ResponseException as err:
             api_config.LOGGER.warning(
                 'Unable to generage message' +
                 '\n\targs={0}'.format(args),

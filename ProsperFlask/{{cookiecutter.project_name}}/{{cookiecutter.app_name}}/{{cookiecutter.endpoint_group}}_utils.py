@@ -25,8 +25,13 @@ def hello_world(
     """
     logger.debug('message={0}'.format(message))
 
-    if isinstance(message, int):
-        raise exceptions.HelloWorldException(
+    numeric = None
+    try:
+        numeric = int(message)
+    except ValueError:
+        pass
+    if not isinstance(message, str) or numeric:
+        raise exceptions.HelloWorldEndpointFailure(
             status=403,
             message='Hey jerk, strings only'
         )

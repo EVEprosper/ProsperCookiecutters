@@ -5,7 +5,7 @@ class ResponseException(Exception):
         self.status = status
         self.message = message
         Exception.__init__(self)
-class HelloWorldException(ResponseException):
+class HelloWorldEndpointFailure(ResponseException):
     """demo custom exception - cookiecutter"""
     pass
 
