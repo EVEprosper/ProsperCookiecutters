@@ -127,9 +127,9 @@ setup(
         ############################
     ],
     tests_require=[
-        'pytest~=3.0.0',
-        'pytest_cov~=2.4.0',
-        'pytest-flask~=0.10.0'
+        'pytest>=3.0.0',
+        'pytest_cov>=2.4.0',
+        'pytest_flask>=0.10.0'
         #### SUGGESTED PACKAGES ####
         #'pytest_pylint~=0.7.0',   #
         #'pymysql~=0.7.10',        #
