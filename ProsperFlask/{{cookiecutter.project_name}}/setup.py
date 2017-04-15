@@ -116,6 +116,7 @@ setup(
         'Flask-RESTful~=0.3.5',
         'flask-script~=2.0.5',
         'requests~=2.13.0',
+        'semantic_version~=2.6.0'
         #### SUGGESTED PACKAGES ####
         #'pandas~=0.19.2',         #
         #'numpy~=1.12.0',          #

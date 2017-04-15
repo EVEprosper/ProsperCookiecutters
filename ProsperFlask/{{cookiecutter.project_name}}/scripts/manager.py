@@ -18,14 +18,14 @@ CONFIG_FILEPATH = path.join(HERE, 'app.cfg')
 
 CONFIG = p_config.ProsperConfig(CONFIG_FILEPATH)
 
-APP = create_app(SETTINGS, CONFIG)
+APP = create_app({}, CONFIG)
 
 MANAGER = Manager(APP)
 MANAGER.add_command(
     'runserver',
     Server(
         host='0.0.0.0',
-        port=CONFIG.get('DEBUG')
+        port=CONFIG.get('DEBUG', 'port')
     )
 )
 MANAGER.add_command(

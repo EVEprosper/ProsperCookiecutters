@@ -6,6 +6,7 @@ import pytest
 from flask import url_for
 
 import {{cookiecutter.app_name}}.exceptions as exceptions
+import helpers
 
 HERE = path.abspath(path.dirname(__file__))
 ROOT = path.dirname(HERE)

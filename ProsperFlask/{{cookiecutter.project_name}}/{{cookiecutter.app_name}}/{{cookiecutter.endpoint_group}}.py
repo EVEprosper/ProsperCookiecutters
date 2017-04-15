@@ -2,9 +2,9 @@
 from os import path
 
 from flask import Flask, Response
-from flask_restful import reqparse, API, Resource
+from flask_restful import reqparse, Api, Resource
 
-import {{cookiecutter.app_name}}.{{cookiecutter.endpoint_group}}_utils.py as {{cookiecutter.app_name}}_utils
+import {{cookiecutter.app_name}}.{{cookiecutter.endpoint_group}}_utils as {{cookiecutter.app_name}}_utils
 import {{cookiecutter.app_name}}._version as version
 import {{cookiecutter.app_name}}.config as api_config
 import {{cookiecutter.app_name}}.exceptions as exceptions

@@ -2,7 +2,7 @@
 """configtest.py: setup pytest defaults/extensions"""
 from os import path
 
-from publicAPI import create_app
+from {{cookiecutter.app_name}} import create_app
 import pytest
 
 import prosper.common.prosper_config as p_config
