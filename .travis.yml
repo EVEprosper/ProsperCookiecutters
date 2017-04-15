@@ -6,7 +6,9 @@ install:
   - "cookiecutter ProsperFlask --no-input"
   - "virtualenv venv_flask -p python3"
   - "source venv_flask/bin/activate"
-  - "pip install FlaskSample"
+  - "cd FlaskSample"
+  - "pip install ."
+  - "cd .."
   - "deactivate"
   ## dh-virtualenv ##
   #- "sudo apt-get install devscripts python-virtualenv git equivs"
