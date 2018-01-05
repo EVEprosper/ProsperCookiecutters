@@ -7,7 +7,7 @@ from {{cookiecutter.library_name}} import _version
 
 class TestCLI:
     """validate cli launches and works as users expect"""
-    app_command = local['{{cookiecutter']
+    app_command = local['{{cookiecutter.cli_name}}']
 
     def test_help(self):
         """validate -h works"""

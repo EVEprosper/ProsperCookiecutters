@@ -10,7 +10,6 @@ import prosper.common.prosper_logging as p_logging
 import prosper.common.prosper_config as p_config
 
 from . import _version
-from . import endpoints
 
 HERE = path.abspath(path.dirname(__file__))
 
