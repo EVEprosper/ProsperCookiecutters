@@ -1,0 +1,8 @@
+[report]
+    omit = 
+        {{cookiecutter.library_name}}/_version.py
+        {{cookiecutter.library_name}}/__init__.py
+        {{cookiecutter.library_name}}/exceptions.py
+
+[paths]
+    source = {{cookiecutter.library_name}}

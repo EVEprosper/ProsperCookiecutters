@@ -65,7 +65,7 @@ class PyTest(TestCommand):
             '-rx',
             '--cov=' + __library_name__,
             '--cov-report=term-missing',
-            '--cov-config=.coveragerc'
+            '--cov-config=.coveragerc',
         ]    #load defaults here
 
     def run_tests(self):
@@ -93,7 +93,7 @@ class QuickTest(PyTest):
             '4',
             '--cov=' + __library_name__,
             '--cov-report=term-missing',
-            '--cov-config=.coveragerc'
+            '--cov-config=.coveragerc',
         ]
 
 setup(
@@ -105,18 +105,18 @@ setup(
     version=get_version(__library_name__),
     license='MIT',
     classifiers=[
-        'Programming Language :: Python :: 3.5'
+        'Programming Language :: Python :: 3.6'
     ],
     keywords='{{cookiecutter.keywords}}',
     packages=find_packages(),
     include_package_data=True,
     package_data={
         '': ['LICENSE', 'README.rst'],
-        __library_name__: ['version.txt']
+        __library_name__: ['version.txt', 'app.cfg']
     },
     entry_points={
         'console_scripts': [
-            '{{cookiecutter.cli_name}}={{cookiecutter.library_name}}.{{cookiecutter.cli_name}}:run_main'
+            '{{cookiecutter.cli_name}}={{cookiecutter.library_name}}.{{cookiecutter.cli_name}}:run_main',
         ]
     },
     install_requires=[
@@ -132,7 +132,7 @@ setup(
         'dev':[
             'sphinx',
             'sphinxcontrib-napoleon',
-            'semantic-version'
+            'semantic-version',
         ]
     },
     cmdclass={

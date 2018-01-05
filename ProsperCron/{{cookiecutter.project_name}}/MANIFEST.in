@@ -1,0 +1,2 @@
+include {{cookiecutter.library_name}}/version.txt
+include {{cookiecutter.library_name}}/app.cfg

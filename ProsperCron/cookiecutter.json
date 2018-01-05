@@ -1,8 +1,10 @@
 {
     "project_name":"PROSPERCLI__project_root",
     "library_name":"PROSPERCLI__library_folder",
-    "cli_name":"PROSPERCLI__cli_application_name",
+    "cli_name":"PROSPERCLI__CLIApplicationName",
     "author_name":"your name here",
     "author_email":"your@email.here",
-    "keywords":"describe your app space separated"
+    "github_name":"githubusername",
+    "keywords":"describe your app space separated",
+    "project_brief":"describe what the cron does"
 }
