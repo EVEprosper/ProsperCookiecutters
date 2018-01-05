@@ -43,7 +43,14 @@ Template for making simple CLI applications.  Exposes launchers with ``entry_poi
 Options
 -------
 
-**TODO**
+- ``project_name``: project root directory name (underscore separated)
+- ``library_name``: python library path (underscore, lower-case)
+- ``cli_name``: desired name for CLI application (camel case, no spaces)
+- ``author_name``
+- ``author_email``
+- ``gihub_name``: GitHub user/organization name
+- ``keywords``: space separated list of keywords for setup.py
+- ``project_brief``: short blurb about what the app does
 
 .. _CookieCutter: https://github.com/audreyr/cookiecutter
 
