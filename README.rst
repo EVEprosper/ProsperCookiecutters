@@ -15,7 +15,7 @@ Getting Started
 
     pip install cookiecutter
     cd {project_root}
-    cookiecutter .../{project_type}
+    cookiecutter .../ProsperCookiecutters/{project_type}
     # fill out questions #
 
 `CookieCutter`_ allows for easy templates so all the boilerplate can be taken care of and you can go straight to development.

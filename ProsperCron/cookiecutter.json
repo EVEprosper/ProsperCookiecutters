@@ -1,0 +1,8 @@
+{
+    "project_name":"PROSPERCLI__project_root",
+    "library_name":"PROSPERCLI__library_folder",
+    "cli_name":"PROSPERCLI__cli_application_name",
+    "author_name":"your name here",
+    "author_email":"your@email.here",
+    "keywords":"describe your app space separated"
+}
