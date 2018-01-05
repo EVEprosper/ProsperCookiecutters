@@ -96,6 +96,21 @@ class QuickTest(PyTest):
             '--cov-config=.coveragerc',
         ]
 
+class TravisTest(PyTest):
+    """wrapper for quick-testing for devs"""
+    user_options = [('pytest-args=', 'a', "Arguments to pass to pytest")]
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        self.pytest_args = [
+            'tests',
+            '-rx',
+            '--junitxml=/tmp/datareader.xml',
+            '--cov=' + __library_name__,
+            '--cov-report=term-missing',
+            '--cov-config=.coveragerc',
+        ]
+
 setup(
     name=__package_name__,
     author='{{cookiecutter.author_name}}',
@@ -137,6 +152,7 @@ setup(
     },
     cmdclass={
         'test':PyTest,
-        'fast': QuickTest
+        'fast': QuickTest,
+        'travis': TravisTest,
     }
 )
