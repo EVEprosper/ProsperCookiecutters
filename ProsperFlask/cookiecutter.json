@@ -1,0 +1,14 @@
+{
+    "project_name":"PROSPERFLASK__project_root",
+    "library_name":"PROSPERFLASK__library_folder",
+    "docker_name":"PROSPERFLASK--docker-name",
+    "flask_port":8000,
+    "flask_endpoint":"PROSPERFLASK__EndpointName",
+    "endpoint_purpose":"brief summary of endpoint purpose",
+    "flask_namespace":"dummy",
+    "author_name":"your name here",
+    "author_email":"your@email.here",
+    "github_name":"githubusername",
+    "keywords":"describe your app space separated",
+    "project_brief":"describe what the microservice does"
+}

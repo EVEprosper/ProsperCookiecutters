@@ -10,7 +10,7 @@ install:
   # - "source venv_flask/bin/activate && cd PROSPERFLASK__project_root && pip install . && cd .. && deactivate"
   - "cookiecutter ProsperCron --no-input"
   - "virtualenv venv_cron -p python3"
-  - "source venv_cron/bin/activate && cd PROSPERCLI__project_root && pip install . && cd .. && deactivate"
+  - "source venv_cron/bin/activate && cd PROSPERCLI__project_root && pip install -e . && cd .. && deactivate"
 script:
   - "source venv_cron/bin/activate && cd PROSPERCLI__project_root"
   - "python setup.py travis"
