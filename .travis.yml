@@ -4,14 +4,22 @@ python:
   - "3.6"
   - "3.6-dev"
 install: 
+# GENERAL STEPS #
   - "pip install cookiecutter"
+# PROSPERFLASK STEPS #
   # - "cookiecutter ProsperFlask --no-input"
   # - "virtualenv venv_flask -p python3"
-  # - "source venv_flask/bin/activate && cd PROSPERFLASK__project_root && pip install . && cd .. && deactivate"
+  # - "source venv_flask/bin/activate && cd PROSPERFLASK__project_root"
+  # - "travis_retry pip install -e ."
+  # - "cd .. && deactivate"
+# PROSPERCRON STEPS #
   - "cookiecutter ProsperCron --no-input"
   - "virtualenv venv_cron -p python3"
-  - "source venv_cron/bin/activate && cd PROSPERCLI__project_root && pip install -e . && cd .. && deactivate"
+  - "source venv_cron/bin/activate && cd PROSPERCLI__project_root"
+  - "travis_retry pip install -e ."
+  - "cd .. && deactivate"
 script:
+  # PROSPERCRON STEPS #
   - "source venv_cron/bin/activate && cd PROSPERCLI__project_root"
   - "python setup.py travis"
   - "cd .. && deactivate"
