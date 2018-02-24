@@ -82,6 +82,9 @@ celerybeat-schedule
 venv/
 ENV/
 
+# TEST Templates
+PROSPER*__project_root/
+
 # Spyder project settings
 .spyderproject
 

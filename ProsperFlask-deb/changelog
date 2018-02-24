@@ -1,0 +1,7 @@
+prosper-flask-deb (1.0.0) stable; urgency=low
+  * Preliminary release
+  * Stand-alone, direct-install Flask REST service template
+  * Packages project as a .deb with dh-virtualenv
+  * Adds basic test framework
+  * Adds basic documentation
+ -- John Purcell <jpurcell.ee@gmail.com>  TBD
