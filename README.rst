@@ -9,7 +9,7 @@ ProsperCookiecutters
 Templates for starting Prosper projects.
 
 Getting Started
----------------
+===============
 
 .. code-block:: bash
 
@@ -21,7 +21,7 @@ Getting Started
 `CookieCutter`_ allows for easy templates so all the boilerplate can be taken care of and you can go straight to development.
 
 ProsperFlask
-============
+------------
 
 Template for standing up REST-ful microservices with Flask.  Comes with:
 
@@ -31,17 +31,17 @@ Template for standing up REST-ful microservices with Flask.  Comes with:
 - Docker template
 
 Options
--------
+=======
 
 **TODO**
 
 ProsperCron
-===========
+-----------
 
 Template for making simple CLI applications.  Exposes launchers with ``entry_points`` for easy deployment.
 
 Options
--------
+=======
 
 - ``project_name``: project root directory name (underscore separated)
 - ``library_name``: python library path (underscore, lower-case)
