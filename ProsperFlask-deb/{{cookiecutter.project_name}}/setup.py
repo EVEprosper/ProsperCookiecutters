@@ -7,22 +7,16 @@ from setuptools.command.test import test as TestCommand
 
 HERE = path.abspath(path.dirname(__file__))
 
-def hack_find_packages(include_str):
-    """patches setuptools.find_packages issue
+def include_all_subfiles(*args):
+    """Slurps up all files in a directory (non recursive) for data_files section
 
-    setuptools.find_packages(path='') doesn't work as intended
+    Note:
+        Not recursive, only includes flat files
 
     Returns:
-        (:obj:`list` :obj:`str`) append <include_str>. onto every element of setuptools.find_pacakges() call
+        list: list of all non-directories in a file
 
     """
-    new_list = [include_str]
-    for element in find_packages(include_str):
-        new_list.append(include_str + '.' + element)
-
-    return new_list
-
-def include_all_subfiles(*args):
     file_list = []
     for path_included in args:
         local_path = path.join(HERE, path_included)
@@ -51,16 +45,15 @@ class PyTest(TestCommand):
             'tests/',
             '--cov={{cookiecutter.app_name}}/',
             '--cov-report=term-missing'
-        ]    #load defaults here
+        ]
 
     def run_tests(self):
         import shlex
-        #import here, cause outside the eggs aren't loaded
         import pytest
         pytest_commands = []
-        try:    #read commandline
+        try:
             pytest_commands = shlex.split(self.pytest_args)
-        except AttributeError:  #use defaults
+        except AttributeError:
             pytest_commands = self.pytest_args
         errno = pytest.main(pytest_commands)
         exit(errno)
