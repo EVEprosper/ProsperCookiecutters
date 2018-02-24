@@ -1,9 +1,4 @@
-"""Slurps up all files in a directory (non recursive) for data_files section
-Note:
-    Not recursive, only includes flat files
-Returns:
-    (:obj:`list` :obj:`str`) list of all non-directories in a file
-""""""Setup.py for ProsperAPI Flask project"""
+"""Setup.py for ProsperAPI Flask project"""
 
 from os import path, listdir
 import importlib
@@ -46,13 +41,13 @@ class PyTest(TestCommand):
     http://doc.pytest.org/en/latest/goodpractices.html#manual-integration
 
     """
-    user_options = [('pytest-args=', 'a', "Arguments to pass to pytest")]
+    user_options = [('pytest-args=', 'a', 'Arguments to pass to pytest')]
 
     def initialize_options(self):
         TestCommand.initialize_options(self)
         self.pytest_args = [
             '-rx',
-            '-vv',
+            '-v',
             'tests/',
             '--cov={{cookiecutter.app_name}}/',
             '--cov-report=term-missing'
@@ -106,38 +101,36 @@ setup(
     data_files=[
         ('services', include_all_subfiles('services')),
         ('docs', include_all_subfiles('docs')),
-        ('tests', include_all_subfiles('tests')),
-        ('scripts', include_all_subfiles('scripts'))
+        ('scripts', include_all_subfiles('scripts')),
     ],
     package_data={
 
     },
     install_requires=[
         'ProsperCommon',
-        'Flask~=0.12',
-        'Flask-RESTful~=0.3.5',
-        'flask-script~=2.0.5',
-        'requests~=2.13.0',
-        'semantic_version~=2.6.0'
+        'Flask',
+        'Flask-RESTful',
+        'flask-script',
+        'requests',
         #### SUGGESTED PACKAGES ####
-        #'pandas~=0.19.2',         #
-        #'numpy~=1.12.0',          #
-        #'tinydb~=3.2.2',          #
-        #'ujson~=1.35',            #
-        #'plumbum~=1.6.3',         #
+        # 'pandas',                #
+        # 'numpy',                 #
+        # 'tinydb',                #
+        # 'ujson',                 #
+        # 'plumbum',               #
         ############################
     ],
     tests_require=[
-        'pytest~=3.0.0',
-        'pytest_cov~=2.4.0',
-        'pytest_flask~=0.10.0'
+        'pytest',
+        'pytest_cov',
+        'pytest_flask',
         #### SUGGESTED PACKAGES ####
-        #'pytest_pylint~=0.7.0',   #
-        #'pymysql~=0.7.10',        #
-        #'tinymongo~=0.1.7.dev0'   #
+        # 'pytest_pylint',         #
+        # 'pymysql',               #
+        # 'tinymongo',             #
         ############################
     ],
     cmdclass={
-        'test':PyTest
+        'test':PyTest,
     }
 )

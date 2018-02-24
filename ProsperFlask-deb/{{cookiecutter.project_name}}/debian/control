@@ -5,7 +5,7 @@ Maintainer: {{cookiecutter.author_name}}
 Build-Depends: debhelper (>=9), python3 (>=3.5), dh-virtualenv (>= 1.0)
 Standards-Version: 3.9.8.0
 
-Package: prosper-api
+Package: {{cookiecutter.deb_project_name}}
 Architecture: any
 Pre-Depends: dpkg (>=1.16.1), python3 | python3.5, python3-tk, ${misc:Pre-Depends}
 Depends: ${python:Depends}, ${misc:Depends}
