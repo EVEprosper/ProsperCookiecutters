@@ -13,9 +13,16 @@ Templates for starting Prosper projects.
 .. code-block:: bash
 
     pip install cookiecutter
-    cd {project_root}
+    cd {source_dir}
     cookiecutter .../ProsperCookiecutters/{project_type}
-    # fill out questions #
+
+    cd {project_dir}
+    git init
+    git add --all
+    git commit -m "first commit: cookiecutter"
+    git remote add origin https://github.com/{username}/{project_name}.git
+    git push -u origin master
+
 
 `CookieCutter`_ allows for easy templates so all the boilerplate can be taken care of and you can go straight to development.
 
