@@ -4,6 +4,8 @@
 ProsperCookiecutters
 ====================
 
+|Build Status| |Docs|
+
 **TODO**: Badges
 
 Templates for starting Prosper projects.
@@ -13,8 +15,7 @@ Templates for starting Prosper projects.
 .. code-block:: bash
 
     pip install cookiecutter
-    cd {source_dir}
-    cookiecutter .../ProsperCookiecutters/{project_type}
+    cookiecutter ProsperCookiecutters/{project_type}
 
     cd {project_dir}
     git init
@@ -60,3 +61,8 @@ Template for making simple CLI applications.  Exposes launchers with ``entry_poi
 
 .. |Show Logo| image:: http://dl.eveprosper.com/podcast/logo-colour-17_sm2.png
     :target: http://eveprosper.com
+.. |Build Status| image:: https://travis-ci.org/EVEprosper/ProsperCookiecutters.svg?branch=master
+    :target: https://travis-ci.org/EVEprosper/ProsperCookiecutters
+.. |Docs| image:: https://readthedocs.org/projects/prospercookiecutters/badge/?version=latest
+    :target: http://prospercookiecutters.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
