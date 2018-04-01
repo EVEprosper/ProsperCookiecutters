@@ -8,7 +8,7 @@ Template includes:
 
 - Flask Launcher
 - Test Framework
-- CI integration
+- CI integration: Travis, Coveralls
 - Docker integration
 
 Using This Template
