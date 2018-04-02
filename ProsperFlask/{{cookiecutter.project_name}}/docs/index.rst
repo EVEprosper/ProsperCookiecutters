@@ -1,10 +1,10 @@
-.. TODO documentation master file, created by
-   sphinx-quickstart on Fri Jan  5 14:18:38 2018.
+.. {{cookiecutter.project_name}} documentation master file, created by
+   sphinx-quickstart on Sun Apr  1 20:13:35 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to TODO's documentation!
-================================
+Welcome to {{cookiecutter.project_name}}'s documentation!
+=========================================================
 
 .. toctree::
    :maxdepth: 2

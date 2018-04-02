@@ -1,0 +1,8 @@
+prosper-flask (1.0.0) stable; urgency=low
+  * Preliminary release
+  * Adds `entry_point` flask launcher via Plumbum for debug
+  * Adds Gunicorn support 
+  * Adds basic README with project badges
+  * Adds Docker container support
+  * Adds CI compatability: Travis, Coveralls
+ -- John Purcell <jpurcell.ee@gmail.com> TBD
