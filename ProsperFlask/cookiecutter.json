@@ -8,7 +8,8 @@
     "flask_namespace":"dummy",
     "author_name":"your name here",
     "author_email":"your@email.here",
-    "github_name":"githubusername",
+    "github_name":"eveprosper",
     "keywords":"describe your app space separated",
-    "project_brief":"describe what the microservice does"
+    "project_brief":"describe what the microservice does",
+    "template_version":"1.0.0",
 }
