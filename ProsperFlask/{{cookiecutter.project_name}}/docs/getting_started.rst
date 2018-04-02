@@ -1,0 +1,46 @@
+===============
+Getting Started
+===============
+
+HELPFUL PROJECT NOTES GO HERE
+
+Developer Guide
+===============
+
+**Getting Started**
+
+.. code-block:: bash
+
+    virtualenv venv_{{cookiecutter.library_name}} -p python3
+    pip install -e .
+
+
+**Debug**
+
+.. code-block:: bash
+
+    launcher_{{cookiecutter.project_name}} -d -v
+
+Launches application on ``localhost:{{cookiecutter.port_number}}``.  Easily test/debug application with `Postman`_.
+
+**Testing**
+
+.. code-block:: bash
+
+    python setup.py test
+    python setup.py travis
+
+``travis`` command runs full integration tests vs Docker.  All other test commands run without Docker tests
+
+**Docs**
+
+.. code-block:: bash
+
+    sphinx-apidoc -f -o docs/source {{cookiecutter.library_name}}/
+    sphinx-build -b html docs/ webpage/
+
+Documentation powered by `Sphinx`_.  Autodocumentation powered by `Napoleon`_
+
+.. _Postman: https://www.getpostman.com/
+.. _Sphinx: http://www.sphinx-doc.org/en/stable/index.html
+.. _Napoleon: http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
