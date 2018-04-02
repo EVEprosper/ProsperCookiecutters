@@ -103,14 +103,14 @@ setup(
     keywords='{{cookiecutter.keywords}}',
     license='MIT',
     classifiers=[
-        'Programming Language :: Python :: 3.6'
+        'Programming Language :: Python :: 3.6',
     ],
 
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        '': ['LICENSE', 'README.rst'],
-        __library_name__: ['version.txt', 'app.cfg']
+        '': ['LICENSE', 'README.rst', ],
+        __library_name__: ['version.txt', 'app.cfg', ]
     },
     entry_points={
         'console_scripts': [
