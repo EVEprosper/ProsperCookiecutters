@@ -4,7 +4,7 @@
 ProsperCookiecutters
 ====================
 
-|Build Status| |Docs|
+|Build Status| |Docs| |Gitter|
 
 **TODO**: Badges
 
@@ -66,3 +66,6 @@ Template for making simple CLI applications.  Exposes launchers with ``entry_poi
 .. |Docs| image:: https://readthedocs.org/projects/prospercookiecutters/badge/?version=latest
     :target: http://prospercookiecutters.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
+.. |Gitter| image:: https://badges.gitter.im/Join%20Chat.svg
+    :alt: Join the chat at https://gitter.im/EVEProsper/Lobby
+    :target: https://gitter.im/EVEProsper/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
