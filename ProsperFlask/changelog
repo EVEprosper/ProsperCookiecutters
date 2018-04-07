@@ -5,4 +5,5 @@ prosper-flask (1.0.0) stable; urgency=low
   * Adds basic README with project badges
   * Adds Docker container support
   * Adds CI compatability: Travis, Coveralls
+  * `python_requires` set to >=3.5
  -- John Purcell <jpurcell.ee@gmail.com> TBD

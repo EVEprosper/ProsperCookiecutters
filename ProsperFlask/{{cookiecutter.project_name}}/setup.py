@@ -82,6 +82,7 @@ class TravisTest(PyTest):
         self.pytest_args = [
             'tests',
             '-rx',
+            '-v',
             '--junitxml=/tmp/datareader.xml',
             '--cov=' + __library_name__,
             '--cov-report=term-missing',
@@ -105,7 +106,6 @@ setup(
     classifiers=[
         'Programming Language :: Python :: 3.6',
     ],
-
     packages=find_packages(),
     include_package_data=True,
     package_data={
@@ -117,11 +117,13 @@ setup(
             'launcher_{{cookiecutter.project_name}}={{cookiecutter.library_name}}.launcher_{{cookiecutter.project_name}}:run_main',
         ]
     },
+    python_requires='>=3.5',
     install_requires=[
         'ProsperCommon',
         'plumbum',
         'Flask',
-        'flask-restplus',
+        'flask-restful',
+        'gunicorn',
     ],
     tests_require=[
         'pytest',
