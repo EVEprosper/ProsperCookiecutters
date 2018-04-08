@@ -22,7 +22,7 @@ NS = API.namespace(
 )
 
 MODEL = API.model(
-    '{{cookiecutter.flask_endpoint}}',
+    'VersionEndpoint',
     {}  # TODO: model docs go here
 )
 
@@ -39,13 +39,3 @@ class VersionEndpoint(Resource):
             'version': _version.__version__,
             'package_name': _version.PROGNAME,
         }
-
-class {{cookiecutter.flask_endpoint}}(Resource):
-    """Endpoint for {{cookiecutter.endpoint_purpose}}"""
-    logger = logging.getLogger(_version.PROGNAME)
-
-    @NS.doc('list_todos')
-    @NS.marshal_list_with(MODEL)
-    def get(self):
-        """TODO"""
-        return {'hello':'world'}

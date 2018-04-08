@@ -1,14 +1,15 @@
 {
     "project_name":"PROSPERFLASK__project_root",
     "library_name":"PROSPERFLASK__library_folder",
+    "flask_namespace":"my_app",
     "author_name":"your name here",
     "author_email":"your@email.here",
     "github_name":"eveprosper",
     "project_brief":"describe what the microservice does",
     "keywords":"describe your app space separated",  
-    "port_number":8000,
+    "flask_port":8000,
     "template_version":"1.0.0",
     "discord_webhook":"",
     "slack_webhook":"",
-    "hipchat_webhook":"",
+    "hipchat_webhook":""
 }

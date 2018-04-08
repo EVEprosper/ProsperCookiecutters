@@ -35,8 +35,8 @@ Deploying
 
 .. code-block:: bash
 
-    docker build -t {{cookiecutter.docker_name}} -f Dockerfile .
-    docker run -d -p {{cookiecutter.flask_port}}:{{cookiecutter.flask_port}} -v local/config/folder/path:/opt/{{cookiecutter.project_name}} {{cookiecutter.docker_name}} 
+    docker build -t {{cookiecutter.library_name}} -f Dockerfile .
+    docker run -d -p {{cookiecutter.flask_port}}:{{cookiecutter.flask_port}} -v local/config/folder/path:/opt/{{cookiecutter.project_name}} {{cookiecutter.library_name}} 
 
 DEPLOYMENT NOTES GO HERE
 

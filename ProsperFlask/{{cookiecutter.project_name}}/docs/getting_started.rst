@@ -25,7 +25,7 @@ Developer Guide
 
     launcher_{{cookiecutter.project_name}} -d -v
 
-Launches application on ``localhost:{{cookiecutter.port_number}}``.  Easily test/debug application with `Postman`_.
+Launches application on ``localhost:{{cookiecutter.flask_port}}``.  Easily test/debug application with `Postman`_.
 
 **Testing**
 
